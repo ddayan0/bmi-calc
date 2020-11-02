@@ -4,7 +4,8 @@ h1{
 }
 button{
   color: maroon;
-  font-weight: bolder;
+  font-weight: bolder;  
+  border-radius: 25px;
 }
 body{
   color: maroon;
