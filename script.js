@@ -1,27 +1,30 @@
 // dennis dayan
-// still need to add colors for div!!
-//..somehow
-function BMI(){
+function BMI() {
   var m = document.getElementById("mass").value;
   var h = document.getElementById("height").value;
-  var actBMI = 703*m/(h**2)
-  if(Number.isNaN(actBMI)){
+  var actBMI = 703 * m / (h ** 2)
+  if (Number.isNaN(actBMI)) {
     console.log("why must you do this")
-    actBMI = "Please input a valid number for the field(s)"     
-    document.getElementById("result").innerHTML = ("Please input a valid number for the field(s)")
-    // i know these statements are redundant, it just needs them to work
-    // i dont know how this works
-    // i dont want to know how this works
-    // it just works, and im ok with that
+ 		document.getElementById("result").innerHTML = ("Please input a valid number for the field(s)")
   }
-  if(actBMI < 0.00){
+  if (actBMI < 0.00) {
     console.log("why must you do this")
     document.getElementById("result").innerHTML = ("Please input a valid number for the field(s)")
+	}
+  if (actBMI < 18.5){
+  	 document.getElementById("result").style.color = "red"
+     document.getElementById("result").innerHTML = (actBMI.toFixed(2) + ". You are underweight!")
   }
-  else{
+  if(actBMI > 18.5 && actBMI <= 24.9){
+  	document.getElementById("result").style.color = "green"
     document.getElementById("result").innerHTML = (actBMI.toFixed(2))
   }
-
-  
+  if(actBMI > 25){
+  	document.getElementById("result").style.color = "#b5ae4e"
+    document.getElementById("result").innerHTML = (actBMI.toFixed(2) + ". You are overweight!")
+  }
+  if(actBMI > 30){  	
+    document.getElementById("result").style.color = "red"
+    document.getElementById("result").innerHTML = (actBMI.toFixed(2) + ". You are obese!")
+  }
 }
-
