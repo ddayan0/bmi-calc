@@ -1,0 +1,13 @@
+h1{
+  text-align: center;
+  color: maroon;
+}
+button{
+  color: maroon;
+  font-weight: bolder;
+}
+body{
+  color: maroon;
+  background-color: beige;
+  font-family: sans-serif;
+}
