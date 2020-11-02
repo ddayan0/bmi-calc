@@ -1,4 +1,6 @@
 // dennis dayan
+// still need to add colors for div!!
+//..somehow
 function BMI(){
   var m = document.getElementById("mass").value;
   var h = document.getElementById("height").value;
